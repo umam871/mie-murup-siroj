@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>MieMurup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Halaman Daftar -->
+    <div id="halamanDaftar">
+        <h1>Selamat Datang di MieMurup</h1>
+        <input type="text" id="nama" placeholder="Masukkan Nama Anda">
+        <input type="email" id="email" placeholder="Masukkan Email Anda">
+        <button onclick="daftar()">Daftar</button>
+    </div>
+
+    <!-- Halaman Menu -->
+    <div id="halamanMenu" style="display: none;">
+        <h1>Menu MieMurup</h1>
+        <div id="daftarMenu" class="menu-container"></div>
+        <button onclick="bukaKeranjang()">Lihat Keranjang</button>
+    </div>
+
+    <!-- Halaman Keranjang -->
+    <div id="halamanKeranjang" style="display: none;">
+        <h1>Keranjang Anda</h1>
+        <ul id="listKeranjang"></ul>
+        <p>Total: Rp <span id="totalHarga">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="kembaliMenu()">Kembali ke Menu</button>
+    </div>
+
+    <!-- Halaman Pembayaran -->
+    <div id="halamanPembayaran" style="display: none;">
+        <h1>Pembayaran</h1>
+        <p>Total Bayar: Rp <span id="totalBayar"></span></p>
+        <h3>Pilih Metode Pembayaran:</h3>
+        <button onclick="pembayaran('COD')">COD (Bayar di Tempat)</button>
+        <button onclick="pembayaran('Transfer Bank')">Transfer Bank</button>
+        <button onclick="pembayaran('E-Wallet')">E-Wallet</button>
+        <div id="hasilPembayaran" style="margin-top:20px;"></div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
